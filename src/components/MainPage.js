@@ -18,12 +18,14 @@ import EmployeeLogin from './EmployeeLogin';
 import AddEscort from './AddEscort';
 import AllEscort from './AllEscort';
 import VehicleRegistration from './VehicleRegistration';
+import { ProtectedRoute } from './ProtectedRoute';
 
 
 function MainPage() {
     return (
         <div>
             <Router>
+                
                 <Switch>
                     <Route exact path='/'>
                         <Dashboard />
@@ -43,9 +45,11 @@ function MainPage() {
                     <Route path='/viewcontainerdetails'>
                         <ViewContainerDetails />
                     </Route>
-                    <Route path='/registercontainer'>
+                    {/* <Route path='/registercontainer'>
                         <ContainerRegistration />
-                    </Route>
+                    </Route> */}
+                    <ProtectedRoute exact path ="/app" component={ContainerRegistration}  />
+                    
                     <Route path='/addagent'>
                         <AddAgent />
                     </Route>

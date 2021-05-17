@@ -9,6 +9,7 @@ function Container() {
             <Header />
             <div className="contain form-contain">
                 <div className="col-2 left-menu"><Sidebar /></div>
+                
                 <div className="col-10 right-menu user-form"><AddContainer/></div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 function VehicleRegistrationForm({ trackingID, vehicleNumber, driver, handleTrackingID, handleVehicle, handleDriver, handleSubmitForm ,handleRedirect }) {
     return (
         <div className="contain form-contain">
-            <div className="col-2 left-menu"><Sidebar /></div>
+            <div className="col-2 left-menu"><Sidebar /></div><hr></hr>
             <div className="col-10 right-menu user-form">
                 <div className="add-Agent">
                     <form >
@@ -24,13 +24,14 @@ function VehicleRegistrationForm({ trackingID, vehicleNumber, driver, handleTrac
                         <div class="row mb-3">
                             <label>Transiting ID</label>
                             <div class="col-sm-12">
-                                <input value="bhf78iuj" name="trackingID" disabled onChange={handleTrackingID} />
+                                <input value="123ert5678" name="trackingID" disabled onChange={handleTrackingID} />
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label>Vehicle Number</label>
                             <div class="col-sm-12">
                                 <input
+                                required
                                     value={vehicleNumber}
                                     type="text"
                                     class="form-control"
@@ -43,6 +44,7 @@ function VehicleRegistrationForm({ trackingID, vehicleNumber, driver, handleTrac
                             <label>Name of Driver</label>
                             <div class="col-sm-12">
                                 <select 
+                                required
                                 value={driver} 
                                 onChange={handleDriver} 
                                 class="form-select col-sm-12" 

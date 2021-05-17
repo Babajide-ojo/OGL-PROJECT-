@@ -1,14 +1,12 @@
 import '../App.css';
 import Header from './Header';
-import Sidebar from './Sidebar';
 import { useState, useEffect, Redirect } from "react";
 import VehicleRegistrationForm from './VehicleRegistrationForm';
-import ContainerRegistration from './ContainerRegistration';
-const VEHICLE_REGISTRATION = localStorage.getItem('vehicles')
+export const VEHICLE_REGISTRATION = localStorage.getItem('vehicles')
     ? JSON.parse(localStorage.getItem('vehicles'))
-    : []
+    : ""
 
-function VehicleRegistration(props) {
+function VehicleRegistration(children, ...rest) {
 
     const [vehicles, setVehicles] = useState(VEHICLE_REGISTRATION)
     const [trackingID, setTrackingID] = useState('')
@@ -45,18 +43,9 @@ function VehicleRegistration(props) {
         }
 
     }
-    const handleRedirect = event => {
-        event.preventDefault()
-       if(localStorage.getItem('vehicles') !== null) {
-           localStorage.clear();
-        <Redirect to ="/registercontainer" />
-       } else{
-        <Redirect to ="/addtrackingid" />
-       }
-           
-    }
+
     useEffect(() => {
-        localStorage.setItem('vehicles', JSON.stringify(vehicles))
+    localStorage.setItem('vehicles', JSON.stringify(vehicles))
     }, [vehicles])
 
     return (
@@ -71,9 +60,11 @@ function VehicleRegistration(props) {
                 handleVehicle={handleVehicle}
                 handleDriver={handleDriver}
                 handleSubmitForm={handleSubmitForm}
-                handleRedirect={handleRedirect}
+             //   handleRedirect={handleRedirect}
             />
+            
         </div>
+
 
     );
 }

@@ -2,7 +2,9 @@ import '../App.css';
 
 function AddContainer() {
   return (
+  
     <div className="add-container">
+  
       <form>
         <div className="form-title">
           <div className="rope">

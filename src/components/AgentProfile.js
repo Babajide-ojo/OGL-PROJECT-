@@ -8,31 +8,32 @@ function AgentProfile() {
             <Header />
             <div className="contain form-contain">
                 <div className="col-2 left-menu"><Sidebar /></div>
+                
                 <div className="col-10 right-menu user-form">
 
-                    <div className="add-container">
-                        <hr></hr>
-                        <h3 className="company-agent">JohnBee Custom Agency</h3>
+                <h3 className="company-agent">JohnBee Custom Agency</h3>
+                    <div className="  add-container">
+                      
 
-                        <div className="agent-profile">
-                            <div className="agent-profile-div" >
-
+                        <div className="row agent-profile">
+                            <div className="col agent-profile-div" >
+                            <label>Agent Company</label>  
                                 <div>
-                                    Ibukunmi Ishola
-                </div>
+                                    <h5>Ibukunmi Ishola</h5>
+                               </div>
                             </div>
 
-                            <div className="agent-profile-div">
-                                <label>Email Address</label>    <hr></hr>
+                            <div className=" col agent-profile-div">
+                                <label>Email Address</label>    
                                 <div>
-                                    johnbeeagency@gmail.com
-                </div>
+                                    <h5>johnbeeagency@gmail.com</h5>
+                            </div>
                             </div>
 
-                            <div className="agent-profile-div">
-                                <label>Phone</label>    <hr></hr>
+                            <div className="col agent-profile-div">
+                                <label>Phone</label>    
                                 <div>
-                                    09012345678
+                                   <h5>09076854321</h5>
                 </div>
                             </div>
                         </div>
@@ -54,14 +55,14 @@ function AgentProfile() {
 
                                         <div>
                                             Name<hr></hr>
-                                    Ibukunmi Ishola
+                                            <h5>john felix </h5>
                 </div>
                                     </div>
                                     <div className="agent-profile-div" >
 
                                         <div>
                                             Email<hr></hr>
-                                    Ibunkun@gmail.com
+                                            <h5>johnbeeagency@gmail.com</h5>
                 </div>
                                     </div>
                                 </div>

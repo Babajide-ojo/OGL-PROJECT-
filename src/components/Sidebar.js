@@ -2,7 +2,7 @@ import '../App.css';
 
 function Sidebar() {
     return (
-        <div className="row ">
+        <div className="row left-menu-row">
        
         <div className="sidebar">
             <div className="side-bar">
